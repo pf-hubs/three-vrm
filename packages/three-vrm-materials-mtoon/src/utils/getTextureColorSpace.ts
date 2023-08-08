@@ -15,9 +15,9 @@ const encodingColorSpaceMap: Record<any, '' | 'srgb'> = {
  * @param texture The texture you want to get the color space from
  */
 export function getTextureColorSpace(texture: THREE.Texture): '' | 'srgb' {
-  if (parseInt(THREE.REVISION, 10) >= 152) {
-    return texture.colorSpace as '' | 'srgb';
-  } else {
-    return encodingColorSpaceMap[(texture as any).encoding];
-  }
+  // if (parseInt(THREE.REVISION, 10) >= 152) {
+  //   return texture.colorSpace as '' | 'srgb';
+  // } else {
+  return encodingColorSpaceMap[(texture as any).encoding];
+  // }
 }

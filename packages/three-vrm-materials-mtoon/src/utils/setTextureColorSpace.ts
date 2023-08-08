@@ -16,9 +16,9 @@ const colorSpaceEncodingMap: Record<'' | 'srgb', any> = {
  * @param colorSpace The color space you want to set to the texture
  */
 export function setTextureColorSpace(texture: THREE.Texture, colorSpace: '' | 'srgb'): void {
-  if (parseInt(THREE.REVISION, 10) >= 152) {
-    texture.colorSpace = colorSpace;
-  } else {
-    (texture as any).encoding = colorSpaceEncodingMap[colorSpace];
-  }
+  // if (parseInt(THREE.REVISION, 10) >= 152) {
+  //   texture.colorSpace = colorSpace;
+  // } else {
+  (texture as any).encoding = colorSpaceEncodingMap[colorSpace];
+  // }
 }
